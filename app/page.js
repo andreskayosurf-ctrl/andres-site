@@ -353,7 +353,7 @@ export default function Home() {
           Los Cabos · Palmilla · San Diego
         </p>
         <p style={{ fontSize: "0.75rem", color: "#ccc", marginTop: "1rem" }}>
-          © 2025 Baja Home &amp; Paws. All rights reserved.
+          © 2026 Baja Home &amp; Paws. All rights reserved.
         </p>
       </footer>
 
