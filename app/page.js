@@ -111,7 +111,8 @@ export default function Home() {
       }}>
         <div style={{
           position: "absolute", inset: 0,
-          background: "linear-gradient(155deg, #b8926a 0%, #5a8e90 50%, #3d7a6e 100%)",
+          backgroundImage: "url(/mona-y-yo.jpg)",
+          backgroundSize: "cover", backgroundPosition: "center",
         }} />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.36)" }} />
 
