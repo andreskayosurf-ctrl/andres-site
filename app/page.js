@@ -38,7 +38,7 @@ const services = [
 const galleryItems = [
   { bg: "#c8a97e" },
   { src: "/playa-palmilla.webp", alt: "Playa Palmilla, Los Cabos" },
-  { bg: "#c4b08a" },
+  { src: "/mona3.jpg", alt: "Mona" },
   { bg: "#7a9e9a" },
   { bg: "#d4b896" },
   { bg: "#a0b8b4" },
