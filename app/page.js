@@ -39,6 +39,8 @@ const galleryItems = [
   { bg: "#c8a97e" },
   { src: "/playa-palmilla.webp", alt: "Playa Palmilla, Los Cabos" },
   { src: "/mona3.jpg", alt: "Mona" },
+  { src: "/mona4.jpeg", alt: "Mona" },
+  { src: "/mona2.jpeg", alt: "Mona" },
   { bg: "#7a9e9a" },
   { bg: "#d4b896" },
   { bg: "#a0b8b4" },
@@ -186,15 +188,11 @@ export default function Home() {
 
       {/* ── DIVIDER IMAGE ── */}
       <div style={{ width: "100%", height: "clamp(200px, 32vw, 400px)", overflow: "hidden" }}>
-        <div style={{
-          width: "100%", height: "100%",
-          background: "linear-gradient(100deg, #7aada8 0%, #c8a97e 55%, #4a8a7e 100%)",
-          display: "flex", alignItems: "center", justifyContent: "center",
-        }}>
-          <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.6rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>
-            [ Add a wide photo of Los Cabos here ]
-          </p>
-        </div>
+        <img
+          src="/playa-palmilla.webp"
+          alt="Playa Palmilla, Los Cabos"
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
       </div>
 
       {/* ── SERVICES ── */}
