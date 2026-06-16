@@ -37,7 +37,7 @@ const services = [
 
 const galleryItems = [
   { bg: "#c8a97e" },
-  { bg: "#8eaaa6" },
+  { src: "/playa-palmilla.webp", alt: "Playa Palmilla, Los Cabos" },
   { bg: "#c4b08a" },
   { bg: "#7a9e9a" },
   { bg: "#d4b896" },
@@ -270,9 +270,17 @@ export default function Home() {
                 onMouseEnter={e => (e.currentTarget.style.opacity = "0.88")}
                 onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
               >
-                <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.58rem", letterSpacing: "0.3em", textTransform: "uppercase" }}>
-                  [ Photo {i + 1} ]
-                </p>
+                {item.src ? (
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                ) : (
+                  <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.58rem", letterSpacing: "0.3em", textTransform: "uppercase" }}>
+                    [ Photo {i + 1} ]
+                  </p>
+                )}
               </div>
             ))}
           </div>
