@@ -12,38 +12,35 @@ const services = [
   {
     title: "Pet Sitting",
     desc: "Daily visits, feeding, walks, and loving companionship for your furry family members — right at home.",
-    price: "from $35 / visit",
     icon: "🐾",
   },
   {
     title: "House Sitting",
     desc: "Full-time presence in your home while you're away — security, upkeep, and total peace of mind.",
-    price: "from $80 / night",
     icon: "🏡",
   },
   {
     title: "Plant Care",
     desc: "Watering schedules, sunlight checks, and light garden maintenance to keep everything thriving.",
-    price: "from $20 / visit",
     icon: "🌿",
   },
   {
     title: "Mail & Package Pickup",
     desc: "We collect your mail and packages safely so nothing piles up or goes missing while you travel.",
-    price: "from $15 / visit",
     icon: "📬",
   },
 ];
 
 const galleryItems = [
-  { bg: "#c8a97e" },
-  { src: "/playa-palmilla.webp", alt: "Playa Palmilla, Los Cabos" },
+  { src: "/perrito1.jpeg", alt: "Perrito" },
   { src: "/mona3.jpg", alt: "Mona" },
   { src: "/mona4.jpeg", alt: "Mona" },
   { src: "/mona2.jpeg", alt: "Mona" },
-  { bg: "#7a9e9a" },
-  { bg: "#d4b896" },
-  { bg: "#a0b8b4" },
+  { src: "/perrito2.jpeg", alt: "Perrito" },
+  { src: "/perrito3.jpeg", alt: "Perrito" },
+  { src: "/perrito4.jpeg", alt: "Perrito" },
+  { src: "/perrito5.jpeg", alt: "Perrito" },
+  { src: "/perrito8.jpeg", alt: "Perrito" },
 ];
 
 export default function Home() {
@@ -174,10 +171,10 @@ export default function Home() {
           Where Care Meets Home
         </h2>
         <p style={{ fontSize: "1rem", lineHeight: 2, color: MUTED, marginBottom: "1.2rem" }}>
-          Hi, we&apos;re Jimena Ariño and Andres Kayo — a couple who turned their love of animals
-          and beautifully kept homes into a dedicated service along the coast of Los Cabos.
-          Based in Palmilla and serving clients in San Diego, we bring genuine warmth,
-          reliability, and real attention to every home and pet we look after.
+          Hi, we&apos;re Jimena and Andres — a couple who turned our love of animals and
+          beautifully kept homes into a dedicated service, with clients in San José del Cabo
+          and San Diego. We bring genuine warmth, reliability, and real attention to every
+          home and pet we look after.
         </p>
         <p style={{ fontSize: "1rem", lineHeight: 2, color: MUTED }}>
           Whether you&apos;re traveling for work or escaping for a vacation, we make sure your
@@ -211,11 +208,12 @@ export default function Home() {
             </h2>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1.5rem" }} className="services-grid">
             {services.map((s) => (
               <div key={s.title} style={{
                 border: `1px solid ${BORDER}`, padding: "2.8rem 2rem",
                 textAlign: "center", background: "#fff",
+                display: "flex", flexDirection: "column", height: "100%",
               }}
                 onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 8px 28px rgba(0,0,0,0.07)")}
                 onMouseLeave={e => (e.currentTarget.style.boxShadow = "none")}
@@ -223,17 +221,16 @@ export default function Home() {
                 <div style={{ fontSize: "2rem", marginBottom: "1rem" }}>{s.icon}</div>
                 <h3 style={{
                   fontFamily: "var(--font-cormorant), Georgia, serif",
-                  fontSize: "1.5rem", fontWeight: 400,
+                  fontSize: "1.5rem", fontWeight: 400, lineHeight: 1.3,
                   letterSpacing: "0.08em", textTransform: "uppercase",
                   marginBottom: "1rem",
+                  minHeight: "5.85rem",
+                  display: "flex", alignItems: "center", justifyContent: "center",
                 }}>
                   {s.title}
                 </h3>
-                <p style={{ fontSize: "0.88rem", lineHeight: 1.9, color: MUTED, marginBottom: "1.5rem" }}>
+                <p style={{ fontSize: "0.88rem", lineHeight: 1.9, color: MUTED }}>
                   {s.desc}
-                </p>
-                <p style={{ fontSize: "0.62rem", letterSpacing: "0.22em", textTransform: "uppercase", color: TEAL, fontWeight: 500 }}>
-                  {s.price}
                 </p>
               </div>
             ))}
@@ -362,9 +359,11 @@ export default function Home() {
           .desk-nav { display: none !important; }
           .hamburger { display: flex !important; }
           .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
         @media (max-width: 480px) {
           .gallery-grid { grid-template-columns: 1fr !important; }
+          .services-grid { grid-template-columns: 1fr !important; }
         }
         a { transition: color 0.2s, background 0.2s; }
       `}</style>
